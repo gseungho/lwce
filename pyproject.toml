@@ -1,0 +1,42 @@
+[project]
+name = "lwce"
+version = "0.1.0"
+description = "Log-weighted cross-entropy losses for class-imbalanced classification: code for the paper"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Seung Ho Go" }]
+dependencies = [
+    "numpy",
+    "pandas<3",
+    "scikit-learn",
+    "scipy",
+    "torch",
+    "torchvision",
+]
+
+[project.urls]
+Repository = "https://github.com/gseungho/lwce"
+
+[project.optional-dependencies]
+text = ["datasets"]
+network = ["kagglehub", "pyarrow"]
+tabular = ["xlrd"]
+figures = ["matplotlib"]
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["lwce*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]

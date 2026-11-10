@@ -1,0 +1,5 @@
+{
+  "domain": "network",
+  "epochs": 50,
+  "proxy_epochs": 10
+}

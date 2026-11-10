@@ -1,0 +1,5 @@
+{
+  "dataset": "cifar100",
+  "epochs": 200,
+  "proxy_epochs": 20
+}

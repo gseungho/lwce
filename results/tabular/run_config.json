@@ -1,0 +1,5 @@
+{
+  "domain": "tabular",
+  "epochs": 100,
+  "proxy_epochs": 20
+}
